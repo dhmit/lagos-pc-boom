@@ -17,6 +17,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         {# Global stylesheets #}
+
+        {# TODO: add normalize as npm dependency instead of relying on this strange cdn #}
+        {# Read about normalize.css here: http://nicolasgallagher.com/about-normalize-css/ #}
+        <link href="https://pagecdn.io/lib/normalize/8.0.1/normalize.css" rel="stylesheet" crossorigin="anonymous"  >
+
+        {#  Here are our stylesheets  #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/app.css' %}">
 
         {% block extra_css %}
