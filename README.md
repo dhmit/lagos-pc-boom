@@ -17,4 +17,16 @@ password: password
 
 This is just for development purposes! 
 
-
+## The project structure, briefly
+```
+lagos
+    | - app/ (our project root)
+        | - settings/
+        | - static/ (top-level static assets, like global CSS)
+        | - templates/ (top-level templates, like base.html which other html files build on top of)
+        | - urls.py (check out search URL which we get for free! Woo!)
+    | - blog/ (our blog app, running on `blog.localhost:8000/`)
+    | - home/ (our home app, running on `localhost:8000`)
+    | manage.py (script to start up server, gets run every time `Run backend` is run)
+    | requirements.txt (includes everything we need to run this project, so far)
+```
