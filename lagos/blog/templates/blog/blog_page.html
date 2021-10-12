@@ -3,10 +3,10 @@
 {% load wagtailcore_tags %}
 
 {% block body_class %}template-blogpage{% endblock %}
-suuuup
+
 {% block content %}
     <h1>{{ page.title }}</h1>
-    <p class="meta">{{ page.date }}</p>
+    <p class="meta">{{ page.date }}</p>{{ page.author }}</p>
     {% if page.intro %}
       <div class="intro">{{ page.intro }}</div>
     {% endif %}
