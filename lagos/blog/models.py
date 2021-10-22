@@ -19,7 +19,7 @@ class BlogIndexPage(Page):
 
 class BlogPage(Page):
     date = models.DateField("Post date")
-    author = models.CharField(max_length=30)
+    author = models.CharField(max_length=30, null=True)
     intro = models.CharField(max_length=250, null=True)
     body = RichTextField(blank=True)
 
