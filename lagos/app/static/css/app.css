@@ -1,3 +1,13 @@
-body {
-    font-family: "Helvetica", sans-serif;
+body{
+    font-family: "Courier", sans-serif;
+}
+
+img{
+    margin-left: 200px;
+    border: 3px solid rgba(98, 93, 143, 0.78);
+    padding: 10px
+}
+
+h1{
+    font-family: "Times New Roman";
 }
