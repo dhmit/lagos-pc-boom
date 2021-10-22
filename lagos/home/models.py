@@ -1,13 +1,8 @@
 from django.db import models
-
 from wagtail.images.models import Image, AbstractImage, AbstractRendition
-
-from modelcluster.fields import ParentalKey
-
 from wagtail.core.models import Page
 from wagtail.core.fields import RichTextField
 from wagtail.admin.edit_handlers import FieldPanel
-
 
 class HomePage(Page):
     body = RichTextField(blank=True)
@@ -15,14 +10,6 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('body', classname="full"),
     ]
-
-# @register_snippet
-# class NavBar(models.Model):
-#     """
-#     This is the navigation bar model
-#     """
-#     name = models.CharField(max_length=255)
-#     # menu_items =
 
 class FrontMatter(Page):
     header = models.CharField(max_length=30, null=True)
