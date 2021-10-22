@@ -24,11 +24,16 @@ class HomePage(Page):
 #     name = models.CharField(max_length=255)
 #     # menu_items =
 
-class LagosImage(AbstractImage):
-    # Add any extra fields to image here
+class FrontMatter(Page):
+    header = models.CharField(max_length=30, null=True)
+    info = RichTextField(blank=True)
 
-    # eg. To add a caption field:
-    # caption = models.CharField(max_length=255, blank=True)
+    content_panels = Page.content_panels + [
+        FieldPanel('header'),
+        FieldPanel('info', classname="full"),
+    ]
+
+class LagosImage(AbstractImage):
 
     obj_num = models.CharField("Object Number", max_length=20, null=True)
     title = models.CharField(max_length=75, null=True)
